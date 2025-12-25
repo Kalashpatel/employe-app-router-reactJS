@@ -9,18 +9,17 @@ export default function ViewEmploye() {
 
   function deleteEmployee(id) {
     if (window.confirm("Are you sure you want to delete this employee?")) {
-      
       const updatedList = employees.filter((emp) => emp.id !== id);
-      
+
       localStorage.setItem("employees", JSON.stringify(updatedList));
-      
+
       setEmployees(updatedList);
     }
   }
 
   return (
     <>
-      <h2 style={{marginBottom: "40px", fontSize: "40px"}}>View Employee</h2>
+      <h2 style={{ marginBottom: "40px", fontSize: "40px" }}>View Employee</h2>
 
       <table border={1} cellPadding={20} cellSpacing={0}>
         <thead>
@@ -65,9 +64,16 @@ export default function ViewEmploye() {
                 <td>{emp.salary}</td>
                 <td>{emp.status}</td>
                 <td
-                  style={{ display: "flex", alignItems: "center", gap: "10px" }}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: "10px",
+                    borderBottom: "1px solid #444",
+                    minHeight: "50px",
+                  }}
                 >
-                  <Link to="/editEmploye">Edit</Link>
+                  <Link to={`/editEmploye/${emp.id}`}>Edit</Link>
                   <button
                     onClick={() => deleteEmployee(emp.id)}
                     style={{
@@ -76,6 +82,8 @@ export default function ViewEmploye() {
                       background: "transparent",
                       fontSize: "16px",
                       color: "crimson",
+                      outline: "none",
+                      border: "none",
                     }}
                   >
                     Delete
