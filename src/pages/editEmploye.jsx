@@ -82,7 +82,7 @@ export default function EditEmploye() {
     <>
       <h2>Edit Employee</h2>
 
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} style={{color: "white"}}>
         <table cellPadding={10}>
           <tr>
             <td>
@@ -110,6 +110,7 @@ export default function EditEmploye() {
                 value={employee.name}
                 placeholder="Enter your Name"
                 onChange={handleChange}
+                color="white"
                 required
               />
             </td>
@@ -218,7 +219,7 @@ export default function EditEmploye() {
           </tr>
           <tr>
             <td colSpan={2}>
-              <button type="submit">Edit Employee</button>
+              <button type="submit" className="add-btn">Edit Employee</button>
             </td>
           </tr>
         </table>

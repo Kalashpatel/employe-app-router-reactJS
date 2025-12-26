@@ -63,16 +63,7 @@ export default function ViewEmploye() {
                 <td>{emp.designation}</td>
                 <td>{emp.salary}</td>
                 <td>{emp.status}</td>
-                <td
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    gap: "10px",
-                    borderBottom: "1px solid #444",
-                    minHeight: "50px",
-                  }}
-                >
+                <td>
                   <Link to={`/editEmploye/${emp.id}`}>Edit</Link>
                   <button
                     onClick={() => deleteEmployee(emp.id)}
@@ -84,6 +75,7 @@ export default function ViewEmploye() {
                       color: "crimson",
                       outline: "none",
                       border: "none",
+                      marginLeft: "10px"
                     }}
                   >
                     Delete
