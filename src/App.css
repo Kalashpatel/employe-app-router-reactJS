@@ -77,7 +77,7 @@ h2{
   font-size: 35px;
   margin-bottom: 55px;
 }
-form{
+.addForm, .editForm{
   padding: 20px;
   border-radius: 20px;
   box-shadow: 0px 0px 10px #5A7ACD;
@@ -128,4 +128,16 @@ select{
   padding: 20px;
   border-radius: 20px;
   box-shadow: 0px 0px 5px #5A7ACD;
+}
+.search-tab{
+  margin-bottom: 30px;
+}
+.searchInput{
+  border: 1px solid white;
+  margin-left: 10px;
+}
+select option {
+  background-color: #000; 
+  color: white;           
+  padding: 10px;
 }

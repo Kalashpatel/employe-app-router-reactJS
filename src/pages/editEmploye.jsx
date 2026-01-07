@@ -25,7 +25,7 @@ export default function EditEmploye() {
     const existingEmp = allEmployee.find((emp) => String(emp.id) === String(id));
 
     if(existingEmp){
-        setEmployee(existingEmp);
+      setEmployee(existingEmp);
     }
 
   },[id]);
@@ -60,6 +60,7 @@ export default function EditEmploye() {
     const {name, value} = e.target;
     setEmployee((prev) => ({
         ...prev,
+        
         [name] : value,
     }));
 
@@ -82,7 +83,7 @@ export default function EditEmploye() {
     <>
       <h2>Edit Employee</h2>
 
-      <form onSubmit={handleSubmit} style={{color: "white"}}>
+      <form onSubmit={handleSubmit} style={{color: "white"}} className="editForm">
         <table cellPadding={10}>
           <tr>
             <td>

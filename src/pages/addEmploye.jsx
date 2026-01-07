@@ -79,7 +79,7 @@ export default function AddEmploye() {
     <>
       <h2>Add Employee</h2>
 
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="addForm">
         <table cellPadding={10}>
           <tr>
             <td>
